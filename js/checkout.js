@@ -76,6 +76,56 @@ window.ValleyCheckout = (function() {
             <p>This is a frontend prototype. No real money or payment details are collected.</p>
           </div>
 
+          <!-- Mobile Collapsible Order Summary Bar -->
+          <div class="checkout-mobile-summary-bar">
+            <div class="co-mob-summary-left">
+              <span class="co-mob-cart-icon">🛒</span>
+              <div class="co-mob-summary-meta">
+                <span class="co-mob-lbl">Order Total:</span>
+                <strong class="co-mob-val">₹${summary.total}</strong>
+                <span class="co-mob-cnt">(${summary.itemCount} items)</span>
+              </div>
+            </div>
+            <button type="button" class="co-mob-summary-toggle" id="co-mob-summary-toggle" aria-expanded="false">
+              <span>View Items</span> <span class="co-arrow-icon">▾</span>
+            </button>
+          </div>
+
+          <div class="checkout-mobile-summary-content" id="co-mob-summary-content" style="display: none;">
+            <div class="co-mob-items-list">
+              ${summary.items.map(item => `
+                <div class="co-item-row">
+                  <img src="${item.image}" alt="${item.name}" class="co-item-thumb" />
+                  <div class="co-item-details">
+                    <span class="co-item-name">${item.name}</span>
+                    <span class="co-item-variant">${item.variantName} × ${item.quantity}</span>
+                  </div>
+                  <span class="co-item-price">₹${item.price * item.quantity}</span>
+                </div>
+              `).join('')}
+            </div>
+            <div class="co-pricing-table" style="margin-top: 10px;">
+              <div class="co-price-row">
+                <span>Items Subtotal</span>
+                <span>₹${summary.subtotal}</span>
+              </div>
+              <div class="co-price-row">
+                <span>Farm Chilled Delivery</span>
+                <span>${summary.deliveryFee === 0 ? '<strong class="free-text">FREE</strong>' : `₹${summary.deliveryFee}`}</span>
+              </div>
+              ${summary.savings > 0 ? `
+                <div class="co-price-row savings-row">
+                  <span>Your Savings</span>
+                  <span>-₹${summary.savings}</span>
+                </div>
+              ` : ''}
+              <div class="co-price-row total-row">
+                <strong>Total Amount</strong>
+                <strong class="total-amount">₹${summary.total}</strong>
+              </div>
+            </div>
+          </div>
+
           ${checkoutStep === 1 ? renderStep1Html() : renderStep2Html()}
         </div>
 
@@ -315,6 +365,20 @@ window.ValleyCheckout = (function() {
       step2Form.onsubmit = function(e) {
         e.preventDefault();
         completeDemoOrder();
+      };
+    }
+
+    // Mobile Order Summary Toggle
+    const mobToggleBtn = document.getElementById("co-mob-summary-toggle");
+    const mobContent = document.getElementById("co-mob-summary-content");
+    if (mobToggleBtn && mobContent) {
+      mobToggleBtn.onclick = function() {
+        const isHidden = mobContent.style.display === "none";
+        mobContent.style.display = isHidden ? "block" : "none";
+        mobToggleBtn.setAttribute("aria-expanded", isHidden);
+        mobToggleBtn.innerHTML = isHidden 
+          ? `<span>Hide Items</span> <span class="co-arrow-icon">▴</span>` 
+          : `<span>View Items</span> <span class="co-arrow-icon">▾</span>`;
       };
     }
 

@@ -114,22 +114,31 @@
   <!-- ==========================================================================
        3. HERO BANNER SLIDER (IMAGES ONLY - NO TEXT/BUTTON OVERLAYS)
        ========================================================================== -->
-  <section class="vf-hero-section" aria-label="Featured Farm Banners">
+  <section class="vf-hero-section" id="hero-section" aria-label="Featured Farm Banners">
     <div class="vf-container">
       <div class="hero-slider-wrap" id="hero-banner-slider">
         <div class="hero-slider-track">
           
-          <!-- Slide 1: Farm-Fresh Eggs in Natural Light -->
+          <!-- Slide 1: Farm Fresh Eggs for a Healthier You (Promotional Feature) -->
           <div class="hero-slide is-active" data-slide-index="0">
             <picture class="hero-picture">
-              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-1.jpg">
-              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-1.jpg">
-              <img src="assets/images/banners/hero-desktop-1.jpg" alt="Natural daylight farm-fresh brown eggs arranged in rustic baskets on a farmhouse kitchen table" class="hero-banner-img" fetchpriority="high" />
+              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-4.png">
+              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-4.png">
+              <img src="assets/images/banners/hero-desktop-4.png" alt="Valley Farm - Farm Fresh Eggs for a Healthier You - Pure Goodness in Every Egg" class="hero-banner-img" fetchpriority="high" />
             </picture>
           </div>
 
-          <!-- Slide 2: Clean Farm Poultry & Culinary Chicken Cuts -->
+          <!-- Slide 2: Farm-Fresh Eggs in Natural Light -->
           <div class="hero-slide" data-slide-index="1">
+            <picture class="hero-picture">
+              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-1.jpg">
+              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-1.jpg">
+              <img src="assets/images/banners/hero-desktop-1.jpg" alt="Natural daylight farm-fresh brown eggs arranged in rustic baskets on a farmhouse kitchen table" class="hero-banner-img" loading="lazy" />
+            </picture>
+          </div>
+
+          <!-- Slide 3: Clean Farm Poultry & Culinary Chicken Cuts -->
+          <div class="hero-slide" data-slide-index="2">
             <picture class="hero-picture">
               <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-2.jpg">
               <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-2.jpg">
@@ -137,8 +146,8 @@
             </picture>
           </div>
 
-          <!-- Slide 3: Golden Raw Honey & Sunlit Farm Pasture -->
-          <div class="hero-slide" data-slide-index="2">
+          <!-- Slide 4: Golden Raw Honey & Sunlit Farm Pasture -->
+          <div class="hero-slide" data-slide-index="3">
             <picture class="hero-picture">
               <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-3.jpg">
               <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-3.jpg">
@@ -549,7 +558,7 @@
           <div class="payment-card-badge"><img src="assets/icons/upi.svg" alt="UPI" /></div>
         </div>
         <div class="footer-copyright-row">
-          <p>© VALLEY FARM 2026 · Powered by <a href="#top-header">Valley Farm</a></p>
+          <p>© VALLEY FARM 2026 · Powered by <a href="#top-header">Saastify</a></p>
         </div>
       </div>
 
@@ -774,6 +783,64 @@
       </button>
     </div>
   </aside>
+
+  <!-- ==========================================================================
+       19. MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="vf-mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="#top-header" class="mobile-bottom-nav-item is-active" id="mb-nav-home" aria-label="Home">
+      <span class="mb-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </span>
+      <span class="mb-nav-label">Home</span>
+    </a>
+
+    <a href="#fresh-picks-section" class="mobile-bottom-nav-item" id="mb-nav-shop" aria-label="Shop Products">
+      <span class="mb-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+      </span>
+      <span class="mb-nav-label">Shop</span>
+    </a>
+
+    <a href="#reels-section" class="mobile-bottom-nav-item" id="mb-nav-reels" aria-label="Farm Reels">
+      <span class="mb-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </span>
+      <span class="mb-nav-label">Reels</span>
+    </a>
+
+    <button type="button" class="mobile-bottom-nav-item" id="mb-nav-cart" aria-label="Shopping Cart" onclick="ValleyApp.openCartDrawer();">
+      <span class="mb-nav-icon mb-nav-cart-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="nav-cart-badge" id="mb-cart-badge">0</span>
+      </span>
+      <span class="mb-nav-label">Cart</span>
+    </button>
+
+    <button type="button" class="mobile-bottom-nav-item" id="mb-nav-account" aria-label="User Account" onclick="ValleyApp.openAccountDrawer();">
+      <span class="mb-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </span>
+      <span class="mb-nav-label">Account</span>
+    </button>
+  </nav>
 
   <!-- ==========================================================================
        JAVASCRIPT SCRIPTS (MODULAR ARCHITECTURE)

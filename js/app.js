@@ -15,6 +15,7 @@ window.ValleyApp = (function() {
     initFooterAccordions();
     initToastContainer();
     initNavLinks();
+    initMobileBottomNav();
 
     // Listen to cart updates
     window.addEventListener("valley:cart-updated", function(e) {
@@ -415,6 +416,76 @@ window.ValleyApp = (function() {
         }
       };
     });
+  }
+
+  /* ==========================================================================
+     MOBILE BOTTOM NAVIGATION CONTROLLER
+     ========================================================================== */
+  function initMobileBottomNav() {
+    const nav = document.getElementById("mobile-bottom-nav");
+    if (!nav) return;
+
+    const navItems = nav.querySelectorAll(".mobile-bottom-nav-item");
+    const homeBtn = document.getElementById("mb-nav-home");
+    const shopBtn = document.getElementById("mb-nav-shop");
+    const reelsBtn = document.getElementById("mb-nav-reels");
+
+    function setActiveItem(targetId) {
+      navItems.forEach(item => {
+        item.classList.toggle("is-active", item.id === targetId);
+      });
+    }
+
+    if (homeBtn) {
+      homeBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        setActiveItem("mb-nav-home");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    if (shopBtn) {
+      shopBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        setActiveItem("mb-nav-shop");
+        const el = document.getElementById("fresh-picks-section");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+
+    if (reelsBtn) {
+      reelsBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        setActiveItem("mb-nav-reels");
+        const el = document.getElementById("reels-section");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+
+    // Scroll spy for mobile bottom nav
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.id === "fresh-picks-section") {
+              setActiveItem("mb-nav-shop");
+            } else if (entry.target.id === "reels-section") {
+              setActiveItem("mb-nav-reels");
+            } else if (entry.target.id === "hero-section" || entry.target.id === "top-header") {
+              setActiveItem("mb-nav-home");
+            }
+          }
+        });
+      }, { threshold: 0.25 });
+
+      const heroEl = document.getElementById("top-header") || document.getElementById("hero-section");
+      const shopEl = document.getElementById("fresh-picks-section");
+      const reelsEl = document.getElementById("reels-section");
+
+      if (heroEl) observer.observe(heroEl);
+      if (shopEl) observer.observe(shopEl);
+      if (reelsEl) observer.observe(reelsEl);
+    }
   }
 
   /* ==========================================================================
