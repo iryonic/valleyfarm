@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 34" width="54" height="34" fill="none">
+  <rect x="0.5" y="0.5" width="53" height="33" rx="4" fill="#FFFFFF" stroke="#E6E7DD"/>
+  <!-- UPI arrows -->
+  <path d="M21 10 L27 22 L23 22 L19 14 Z" fill="#097939"/>
+  <path d="M27 10 L33 22 L29 22 L25 14 Z" fill="#ED752E"/>
+  <text x="35" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#252922">UPI</text>
+</svg>

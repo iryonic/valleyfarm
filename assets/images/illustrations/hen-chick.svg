@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" fill="none">
+  <!-- Warm cream circular background element -->
+  <circle cx="100" cy="80" r="72" fill="#FFF8EC" stroke="#E6E7DD" stroke-width="2"/>
+  <!-- Sunny pasture backdrop -->
+  <path d="M30 115 C60 100, 140 100, 170 115 L170 145 C150 152, 50 152, 30 145 Z" fill="#22C55E" opacity="0.3"/>
+  
+  <!-- Hen Body -->
+  <g transform="translate(45, 40)">
+    <!-- Tail feathers -->
+    <path d="M5 45 C-5 25, 10 15, 25 30 C15 15, 30 5, 40 25" stroke="#16A34A" stroke-width="3" fill="#22C55E" stroke-linecap="round"/>
+    <!-- Body -->
+    <path d="M15 48 C15 75, 55 82, 70 65 C78 55, 75 35, 60 30 C45 25, 25 32, 15 48 Z" fill="#16A34A" stroke="#064E3B" stroke-width="3"/>
+    <!-- Hen Wing -->
+    <path d="M30 45 C35 60, 52 62, 58 48 C62 38, 48 35, 30 45 Z" fill="#22C55E" stroke="#16A34A" stroke-width="2"/>
+    <!-- Hen Comb -->
+    <path d="M60 20 C60 12, 65 10, 68 15 C72 10, 77 12, 76 18 C80 15, 83 18, 80 24" fill="#D97950" stroke="#D97950" stroke-width="2"/>
+    <!-- Hen Head & Neck -->
+    <path d="M58 35 C62 25, 72 22, 78 28 C82 32, 76 42, 68 46" fill="#16A34A" stroke="#064E3B" stroke-width="3"/>
+    <!-- Hen Eye -->
+    <circle cx="72" cy="27" r="2" fill="#FFF8EC"/>
+    <circle cx="72.5" cy="27" r="1" fill="#064E3B"/>
+    <!-- Hen Beak -->
+    <path d="M78 28 L86 31 L78 34 Z" fill="#FACC15" stroke="#D97950" stroke-width="1.5"/>
+    <!-- Hen Wattle -->
+    <path d="M74 34 C74 38, 70 40, 72 43 C75 43, 76 38, 76 34" fill="#D97950"/>
+    <!-- Hen Feet -->
+    <path d="M38 78 L38 90 M38 90 L32 94 M38 90 L38 95 M38 90 L44 94" stroke="#D97950" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M50 76 L50 88 M50 88 L45 92 M50 88 L50 93 M50 88 L55 92" stroke="#D97950" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Baby Chick -->
+  <g transform="translate(125, 75)">
+    <!-- Chick Body -->
+    <circle cx="22" cy="30" r="16" fill="#FACC15" stroke="#16A34A" stroke-width="2.5"/>
+    <!-- Chick Head -->
+    <circle cx="30" cy="18" r="11" fill="#FACC15" stroke="#16A34A" stroke-width="2.5"/>
+    <!-- Chick Wing -->
+    <path d="M14 28 C16 35, 25 35, 26 28" fill="#FFF8EC" stroke="#16A34A" stroke-width="2"/>
+    <!-- Chick Eye -->
+    <circle cx="34" cy="16" r="1.5" fill="#064E3B"/>
+    <!-- Chick Beak -->
+    <path d="M39 17 L45 19 L39 21 Z" fill="#D97950"/>
+    <!-- Chick Feet -->
+    <path d="M18 45 L18 52 M18 52 L14 55 M18 52 L22 55" stroke="#D97950" stroke-width="2" stroke-linecap="round"/>
+    <path d="M26 45 L26 52 M26 52 L22 55 M26 52 L30 55" stroke="#D97950" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

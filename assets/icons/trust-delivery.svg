@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <circle cx="32" cy="32" r="28" fill="#FFF8EC" stroke="#16A34A" stroke-width="2.5"/>
+  <!-- Farm Delivery Van / Electric Cart -->
+  <path d="M16 28 L34 28 L34 40 L16 40 Z" fill="#16A34A" stroke="#064E3B" stroke-width="2"/>
+  <path d="M34 31 L42 31 L46 36 L46 40 L34 40 Z" fill="#22C55E" stroke="#16A34A" stroke-width="2"/>
+  <!-- Window -->
+  <polygon points="36,33 41,33 44,36 36,36" fill="#FFF8EC"/>
+  <!-- Wheels -->
+  <circle cx="23" cy="40" r="4" fill="#252922" stroke="#FFF8EC" stroke-width="1.5"/>
+  <circle cx="39" cy="40" r="4" fill="#252922" stroke="#FFF8EC" stroke-width="1.5"/>
+  <!-- Motion line -->
+  <line x1="12" y1="34" x2="15" y2="34" stroke="#D97950" stroke-width="2" stroke-linecap="round"/>
+</svg>

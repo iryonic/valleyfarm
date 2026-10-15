@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 54" width="240" height="54" fill="none">
+  <!-- Brand Icon Badge -->
+  <g transform="translate(4, 5)">
+    <rect x="0" y="0" width="44" height="44" rx="12" fill="#16A34A" stroke="#064E3B" stroke-width="2"/>
+    <!-- Farm sunrise / hills -->
+    <path d="M6 34 C14 26, 22 36, 38 28 L38 38 C38 40.2, 36.2 42, 34 42 L10 42 C7.8 42, 6 40.2, 6 38 Z" fill="#4ADE80"/>
+    <!-- Sun -->
+    <circle cx="22" cy="18" r="7" fill="#FACC15"/>
+    <!-- Roosting Hen / Chick Silhouette in warm cream -->
+    <path d="M16 28 C16 23, 21 21, 24 23 C26 21, 29 23, 28 27 C31 28, 30 32, 26 33 C22 34, 18 33, 16 28 Z" fill="#FFFDF7"/>
+    <circle cx="25" cy="23.5" r="1.2" fill="#064E3B"/>
+    <path d="M28 24 L31 25.5 L28 27 Z" fill="#D97950"/>
+  </g>
+  <!-- Brand Typography -->
+  <g transform="translate(56, 12)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#064E3B" letter-spacing="-0.5">VALLEY<tspan fill="#16A34A"> FARM</tspan></text>
+    <text x="1" y="32" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#16A34A" letter-spacing="2.2">100% FARM FRESH HARVEST</text>
+  </g>
+</svg>

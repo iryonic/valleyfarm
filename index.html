@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valley Farm — 100% Farm-Fresh Eggs, Poultry, Chicks & Pure Raw Honey</title>
+  <meta name="description" content="Shop Valley Farm's fresh harvest: naturally laid brown eggs, tender clean chicken cuts, healthy day-old chicks, and cold-extracted raw wildflower honey delivered fresh to your home.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.svg">
+
+  <!-- Stylesheets (Design System & Mobile-First Responsive) -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. GLOBAL ANNOUNCEMENT MARQUEE BAR
+       ========================================================================== -->
+  <aside class="vf-announcement-bar" aria-label="Farm Announcement">
+    <div class="marquee-track">
+      <div class="marquee-item">
+        <span>🌿 Morning Harvest: Delivered Fresh To Your Doorstep Within Hours</span>
+        <span class="bullet">•</span>
+        <span>🥚 Fresh Eggs Laid This Morning • 100% Naturally Sourced &amp; Traceable</span>
+        <span class="bullet">•</span>
+        <span>🍯 Pure Wildflower Honey In Stock • Cold-Extracted &amp; Unfiltered</span>
+        <span class="bullet">•</span>
+        <span>🚚 Free Farm Delivery on All Orders Above ₹499</span>
+        <span class="bullet">•</span>
+      </div>
+      <!-- Duplicate for seamless looping without visual gap -->
+      <div class="marquee-item" aria-hidden="true">
+        <span>🌿 Morning Harvest: Delivered Fresh To Your Doorstep Within Hours</span>
+        <span class="bullet">•</span>
+        <span>🥚 Fresh Eggs Laid This Morning • 100% Naturally Sourced &amp; Traceable</span>
+        <span class="bullet">•</span>
+        <span>🍯 Pure Wildflower Honey In Stock • Cold-Extracted &amp; Unfiltered</span>
+        <span class="bullet">•</span>
+        <span>🚚 Free Farm Delivery on All Orders Above ₹499</span>
+        <span class="bullet">•</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. GLOBAL HEADER & MAIN NAVIGATION
+       ========================================================================== -->
+  <header class="vf-header" id="top-header">
+    <div class="vf-container header-inner">
+      <div class="header-left">
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="header-action-btn mobile-menu-btn" id="mobile-menu-toggle-btn" aria-label="Open mobile navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#top-header" class="brand-logo-link" aria-label="Valley Farm Home">
+          <img src="assets/images/logo/logo.svg" alt="Valley Farm Logo" class="brand-logo-img" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="header-nav" aria-label="Primary Navigation">
+          <a href="#top-header" class="nav-link is-active">Home</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="all">Shop All</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="eggs">Fresh Eggs</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="chicken">Chicken</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="chicks">Chicks</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="honey">Pure Honey</a>
+          <a href="#fresh-picks-section" class="nav-link" data-category-target="combos">Farm Combos</a>
+          <a href="#farm-facts-section" class="nav-link">Our Story</a>
+        </nav>
+      </div>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Live Search Trigger -->
+        <button type="button" class="header-action-btn trigger-search-modal" aria-label="Search farm harvest products">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <!-- Account Profile Trigger -->
+        <button type="button" class="header-action-btn trigger-account-drawer" aria-label="Customer account and orders">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </button>
+
+        <!-- Shopping Cart Drawer Trigger -->
+        <div class="cart-btn-wrap">
+          <button type="button" class="header-action-btn trigger-cart-drawer" aria-label="View shopping cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span class="nav-cart-badge" aria-live="polite">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       3. HERO BANNER SLIDER (IMAGES ONLY - NO TEXT/BUTTON OVERLAYS)
+       ========================================================================== -->
+  <section class="vf-hero-section" aria-label="Featured Farm Banners">
+    <div class="vf-container">
+      <div class="hero-slider-wrap" id="hero-banner-slider">
+        <div class="hero-slider-track">
+          
+          <!-- Slide 1: Farm-Fresh Eggs in Natural Light -->
+          <div class="hero-slide is-active" data-slide-index="0">
+            <picture class="hero-picture">
+              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-1.jpg">
+              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-1.jpg">
+              <img src="assets/images/banners/hero-desktop-1.jpg" alt="Natural daylight farm-fresh brown eggs arranged in rustic baskets on a farmhouse kitchen table" class="hero-banner-img" fetchpriority="high" />
+            </picture>
+          </div>
+
+          <!-- Slide 2: Clean Farm Poultry & Culinary Chicken Cuts -->
+          <div class="hero-slide" data-slide-index="1">
+            <picture class="hero-picture">
+              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-2.jpg">
+              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-2.jpg">
+              <img src="assets/images/banners/hero-desktop-2.jpg" alt="Farm-fresh poultry chicken breast cuts and culinary pieces arranged on a rustic wooden carving board with herbs" class="hero-banner-img" loading="lazy" />
+            </picture>
+          </div>
+
+          <!-- Slide 3: Golden Raw Honey & Sunlit Farm Pasture -->
+          <div class="hero-slide" data-slide-index="2">
+            <picture class="hero-picture">
+              <source media="(max-width: 576px)" srcset="assets/images/banners/hero-mobile-3.jpg">
+              <source media="(max-width: 991px)" srcset="assets/images/banners/hero-tablet-3.jpg">
+              <img src="assets/images/banners/hero-desktop-3.jpg" alt="Golden glass jars of raw wildflower honeycomb honey and fresh farm assortment overlooking rolling green meadows" class="hero-banner-img" loading="lazy" />
+            </picture>
+          </div>
+
+        </div>
+
+        <!-- Floating Slider Controls -->
+        <div class="hero-slider-arrows">
+          <button type="button" class="hero-arrow-btn" id="hero-prev-btn" aria-label="Previous promotional slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+          <button type="button" class="hero-arrow-btn" id="hero-next-btn" aria-label="Next promotional slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="hero-slider-dots-wrap" id="hero-slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. SHOP BY CATEGORY (CIRCULAR ILLUSTRATIONS / PHOTOS WITH NAMES)
+       ========================================================================== -->
+  <section class="vf-category-section" id="categories-section" aria-label="Shop by Category">
+    <div class="vf-container">
+      <div class="vf-section-header" style="margin-bottom: var(--vf-space-md); text-align: center; align-items: center;">
+       
+        <h2 class="vf-section-title">Shop by <span style="color:#16A34A;">Category</span></h2>
+      </div>
+
+      <div class="category-rail-wrapper">
+        <div class="category-rail-scroll" id="category-rail-container">
+          <!-- Dynamically populated by js/products.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FEATURED PRODUCTS SECTION ("FRESH PICKS")
+       ========================================================================== -->
+  <section class="vf-products-section" id="fresh-picks-section" aria-label="Featured Farm Products">
+    <div class="vf-container">
+      <div class="vf-section-header">
+        <h2 class="vf-section-title">Our  <span style="color:#16A34A;">Products</span></h2>
+      </div>
+
+      <!-- Catalog Filter & Sorting Toolbar -->
+      <div class="catalog-toolbar-row">
+        <div class="catalog-filter-tabs" role="tablist">
+          <button type="button" class="filter-tab-pill is-active" data-category="all" onclick="ValleyProducts.filterCategory('all')">All Products</button>
+          <button type="button" class="filter-tab-pill" data-category="eggs" onclick="ValleyProducts.filterCategory('eggs')">Fresh Eggs</button>
+          <button type="button" class="filter-tab-pill" data-category="chicken" onclick="ValleyProducts.filterCategory('chicken')">Chicken Cuts</button>
+          <button type="button" class="filter-tab-pill" data-category="chicks" onclick="ValleyProducts.filterCategory('chicks')">Day-Old Chicks</button>
+          <button type="button" class="filter-tab-pill" data-category="honey" onclick="ValleyProducts.filterCategory('honey')">Pure Honey</button>
+          <button type="button" class="filter-tab-pill" data-category="trays" onclick="ValleyProducts.filterCategory('trays')">Egg Trays</button>
+          <button type="button" class="filter-tab-pill" data-category="combos" onclick="ValleyProducts.filterCategory('combos')">Combos</button>
+        </div>
+
+        <div class="catalog-sort-box">
+          <span class="product-count-badge" id="catalog-count-badge" style="font-size:0.82rem; font-weight:700; color:var(--vf-muted-text); margin-right:8px;">8 Products</span>
+          <label for="catalog-sort-select">Sort by:</label>
+          <select id="catalog-sort-select" class="custom-select" aria-label="Sort products">
+            <option value="featured">Featured Harvest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-slider-wrap">
+        <div class="products-grid" id="featured-products-grid">
+          <!-- Dynamically populated by js/products.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. PROMOTIONAL / SEASONAL STRIP
+       ========================================================================== -->
+  <section class="vf-promo-section" aria-label="Seasonal Harvest Offer">
+    <div class="vf-container">
+      <div class="promo-banner-card">
+        <div class="promo-text-col">
+          <h2>Morning Essentials Farm Bundle</h2>
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <button type="button" class="btn btn-accent large" onclick="ValleyCart.addItem(window.VALLEY_DATA.getProductById('vf-prod-08'), null, 1); ValleyApp.showToast('Added Morning Essentials Bundle to cart!', 'success'); ValleyApp.openCartDrawer();">
+              Add Bundle to Cart • ₹329
+            </button>
+            <button type="button" class="btn btn-secondary large" onclick="ValleyProducts.openQuickView('vf-prod-08')">
+              View Bundle Details
+            </button>
+          </div>
+        </div>
+        <div class="promo-media-box">
+          <img src="assets/images/products/farm-combo.jpg" alt="Eggs and honey bundle set on a rustic wooden table" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. FARM FACTS & ILLUSTRATED BRAND STORY
+       ========================================================================== -->
+  <section class="vf-facts-section" id="farm-facts-section" aria-label="Farm Facts and Illustrated Brand Story">
+    <div class="vf-container">
+      <div class="vf-section-header" style="text-align: center; align-items: center;">
+        <h2 class="vf-section-title">Fun <span style="color:#16A34A;">Facts</span></h2>
+      </div>
+
+      <div class="facts-grid">
+        <!-- Fact 1: Egg Basket -->
+        <article class="fact-card">
+          <span class="fact-card-tag">Nest to Table</span>
+          <div class="fact-illustration-wrap">
+            <img src="assets/images/illustrations/egg-basket.svg" alt="Illustrated morning egg basket" loading="lazy" />
+          </div>
+          <h3>Good Food Starts at the Farm</h3>
+        </article>
+
+        <!-- Fact 2: Hen & Chick -->
+        <article class="fact-card">
+          <span class="fact-card-tag">Flock Health</span>
+          <div class="fact-illustration-wrap">
+            <img src="assets/images/illustrations/hen-chick.svg" alt="Illustrated friendly hen and fluffy chick" loading="lazy" />
+          </div>
+          <h3>Little Chicks, Big Beginnings</h3>
+        </article>
+
+        <!-- Fact 3: Honey & Bees -->
+        <article class="fact-card">
+          <span class="fact-card-tag">Raw &amp; Pure</span>
+          <div class="fact-illustration-wrap">
+            <img src="assets/images/illustrations/honey-bees.svg" alt="Illustrated honey jar and honeybees" loading="lazy" />
+          </div>
+          <h3>A Sweeter Side of the Farm</h3>
+        </article>
+
+        <!-- Fact 4: Pastures & Sunrise -->
+        <article class="fact-card">
+          <span class="fact-card-tag">Open Pastures</span>
+          <div class="fact-illustration-wrap">
+            <img src="assets/images/illustrations/green-fields.svg" alt="Illustrated sun rising over green valley farm" loading="lazy" />
+          </div>
+          <h3>Clean Pastures &amp; Sunlit Living</h3>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. BRAND REELS SECTION ("LIFE ON THE FARM")
+       ========================================================================== -->
+  <section class="vf-reels-section" id="reels-section" aria-label="Brand Reels: Life on the Farm">
+    <div class="vf-container">
+      <div class="vf-section-header" style="display:flex; justify-content:space-between; align-items:center; flex-direction:row; flex-wrap:wrap;">
+        <div>
+          <h2 class="vf-section-title"> Brand <span style="color:#16A34A;">Reels</span></h2>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn btn-secondary btn-sm" id="reels-prev-btn" aria-label="Previous reels">❮</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="reels-next-btn" aria-label="Next reels">❯</button>
+        </div>
+      </div>
+
+      <div class="reels-scroll-track" id="reels-track">
+        <!-- Dynamically populated by js/sliders.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. CUSTOMER TRUST INDICATORS
+       ========================================================================== -->
+  <section class="vf-trust-section" aria-label="Customer Trust Indicators">
+    <div class="vf-container">
+      <div class="vf-section-header" style="text-align: center; align-items: center;">
+        <span class="vf-section-tag">Quality Promises</span>
+        <h2 class="vf-section-title">Why <span style="color:#16A34A;">Trust</span> Us</h2>
+        
+      </div>
+      <div class="trust-indicators-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <img src="assets/icons/trust-fresh.svg" alt="Farm Fresh Selection Icon" loading="lazy" />
+          </div>
+          <h4>Farm-Fresh Harvest</h4>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <img src="assets/icons/trust-pack.svg" alt="Carefully Packed Icon" loading="lazy" />
+          </div>
+          <h4>Carefully Packed</h4>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <img src="assets/icons/trust-quality.svg" alt="Quality Handling Icon" loading="lazy" />
+          </div>
+          <h4>Quality-Focused</h4>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <img src="assets/icons/trust-transparent.svg" alt="Clear Information Icon" loading="lazy" />
+          </div>
+          <h4>Honest Traceability</h4>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <img src="assets/icons/trust-delivery.svg" alt="Convenient Delivery Icon" loading="lazy" />
+          </div>
+          <h4>Morning Delivery</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. CUSTOMER TESTIMONIALS SLIDER
+       ========================================================================== -->
+  <section class="vf-testimonials-section" aria-label="Customer Testimonials">
+    <div class="vf-container">
+      <div class="vf-section-header" style="text-align: center; align-items: center;">
+        <span class="vf-section-tag">Community Love</span>
+        <h2 class="vf-section-title">What <span style="color:#16A34A;">Customers</span> Say</h2>
+      </div>
+
+      <div class="testimonial-track" id="testimonials-track">
+        <!-- Dynamically populated by js/sliders.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. DISTINCTIVE CURVED FOOTER WITH ACCORDIONS (MOBILE)
+       ========================================================================== -->
+  <!-- Dedicated Organic Rolling Hill / Wave Divider in normal document flow -->
+  <div class="footer-wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <path d="M0,32 C280,75 520,10 760,48 C1000,85 1240,18 1440,38 L1440,90 L0,90 Z" fill="#16A34A"></path>
+    </svg>
+  </div>
+
+
+
+  <footer class="vf-footer-wrap" aria-label="Valley Farm Footer">
+    <div class="vf-container footer-content">
+      
+      <!-- Main Layout: Brand & Newsletter on Left, Navigation on Right -->
+      <div class="footer-main-layout">
+        
+        <!-- Brand & Newsletter Column -->
+        <div class="footer-brand-column">
+          <!-- Logo & Brand Header -->
+          <div class="footer-brand-identity">
+            <svg class="footer-logo-badge" width="46" height="46" viewBox="0 0 44 44" fill="none">
+              <rect x="0" y="0" width="44" height="44" rx="12" fill="#FACC15" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M6 34 C14 26, 22 36, 38 28 L38 38 C38 40.2, 36.2 42, 34 42 L10 42 C7.8 42, 6 40.2, 6 38 Z" fill="#16A34A"/>
+              <circle cx="22" cy="18" r="7" fill="#FFFFFF"/>
+              <path d="M16 28 C16 23, 21 21, 24 23 C26 21, 29 23, 28 27 C31 28, 30 32, 26 33 C22 34, 18 33, 16 28 Z" fill="#064E3B"/>
+              <circle cx="25" cy="23.5" r="1.2" fill="#FACC15"/>
+              <path d="M28 24 L31 25.5 L28 27 Z" fill="#EA580C"/>
+            </svg>
+            <div class="footer-brand-text">
+              <h3 class="footer-brand-name">VALLEY FARM <span class="reg-mark">®</span></h3>
+              <p class="footer-brand-tagline">PURE N NATURAL</p>
+            </div>
+          </div>
+          
+          <div class="footer-brand-dash"></div>
+
+          <!-- Circular White Social Buttons -->
+          <div class="footer-social-circles">
+            <a href="#top-header" class="social-circle-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#top-header" class="social-circle-btn" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="#top-header" class="social-circle-btn" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#top-header" class="social-circle-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#top-header" class="social-circle-btn" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Newsletter Box -->
+          <div class="footer-newsletter-section">
+            <h4 class="newsletter-heading">Join Our Family 🍯</h4>
+            <p class="newsletter-subtext">Sign up for fresh harvest drops &amp; exclusive member offers.</p>
+            <form id="newsletter-form" class="footer-newsletter-form" novalidate>
+              <div class="footer-newsletter-input-wrap">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email address for farm newsletter" />
+                <button type="submit" id="newsletter-submit-btn" class="footer-newsletter-btn">Subscribe</button>
+              </div>
+              <div id="newsletter-feedback-msg" class="newsletter-msg" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Navigation Accordions / Links Column -->
+        <div class="footer-accordions-group">
+          <!-- 1. Shop -->
+          <div class="footer-acc-item">
+            <button type="button" class="footer-acc-trigger" aria-expanded="false">
+              <span>Shop</span>
+              <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="footer-acc-content">
+              <ul>
+                <li><a href="#fresh-picks-section" data-category-target="eggs">Fresh Brown Eggs</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="chicken">Chicken Curry Cuts</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="chicken">Boneless Chicken Breast</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="chicks">Day-Old Chicks</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="honey">Raw Wildflower Honey</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="trays">30-Egg Monthly Tray</a></li>
+                <li><a href="#fresh-picks-section" data-category-target="combos">Breakfast Combos</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2. More -->
+          <div class="footer-acc-item">
+            <button type="button" class="footer-acc-trigger" aria-expanded="false">
+              <span>More</span>
+              <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="footer-acc-content">
+              <ul>
+                <li><a href="#farm-facts-section">The Valley Story</a></li>
+                <li><a href="#farm-facts-section">Husbandry Standards</a></li>
+                <li><a href="#reels-section">Behind the Scenes Reels</a></li>
+                <li><a href="#top-header">Apiary &amp; Bee Health</a></li>
+                <li><a href="#top-header">Farm Visit Bookings</a></li>
+                <li><a href="#top-header">Morning Delivery Slots</a></li>
+                <li><a href="#testimonials-section">Customer Reviews</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. Policies -->
+          <div class="footer-acc-item">
+            <button type="button" class="footer-acc-trigger" aria-expanded="false">
+              <span>Policies</span>
+              <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="footer-acc-content">
+              <ul>
+                <li><a href="#top-header" onclick="ValleyApp.openAccountDrawer();">Track Order Status</a></li>
+                <li><a href="#top-header">Freshness Guarantee</a></li>
+                <li><a href="#top-header">Cancellation &amp; Refund</a></li>
+                <li><a href="#top-header">Privacy Policy</a></li>
+                <li><a href="#top-header">Terms &amp; Conditions</a></li>
+                <li><a href="#top-header">Contact &amp; Support</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /footer-main-layout -->
+
+      <!-- Footer Bottom Bar (Payments + Copyright) -->
+      <div class="footer-bottom-bar">
+        <div class="footer-payment-row">
+          <div class="payment-card-badge"><img src="assets/icons/visa.svg" alt="Visa" /></div>
+          <div class="payment-card-badge"><img src="assets/icons/mastercard.svg" alt="Mastercard" /></div>
+          <div class="payment-card-badge"><img src="assets/icons/gpay.svg" alt="Google Pay" /></div>
+          <div class="payment-card-badge"><img src="assets/icons/upi.svg" alt="UPI" /></div>
+        </div>
+        <div class="footer-copyright-row">
+          <p>© VALLEY FARM 2026 · Powered by <a href="#top-header">Valley Farm</a></p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       12. FUNCTIONAL CART DRAWER (SIDEBAR)
+       ========================================================================== -->
+  <div class="vf-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="vf-drawer-panel" id="cart-drawer" aria-labelledby="cart-drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <div class="drawer-header-title">
+        <h3 id="cart-drawer-title">Your Fresh Cart</h3>
+        <span class="drawer-count-badge" id="cart-drawer-count">0 items</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="cart-drawer-close-btn" aria-label="Close cart drawer">✕</button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="drawer-delivery-progress">
+      <div class="progress-text" id="free-delivery-progress-text">
+        Add <strong>₹499</strong> more for <strong>FREE Farm Delivery</strong>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="free-delivery-progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div class="cart-drawer-empty-state" id="cart-drawer-empty" style="display:flex;">
+      <div class="empty-icon">🧺</div>
+      <h3>Your basket is empty</h3>
+      <p>Explore our fresh brown eggs, tender chicken cuts, and raw honey to start your order.</p>
+      <button type="button" class="btn btn-primary" id="cart-empty-shop-btn">Explore Fresh Picks</button>
+    </div>
+
+    <!-- Filled Items Scroll Body -->
+    <div class="drawer-scroll-body" id="cart-drawer-items">
+      <!-- Populated dynamically by js/app.js -->
+    </div>
+
+    <!-- Drawer Footer Summary & Actions -->
+    <div class="drawer-footer" id="cart-drawer-filled" style="display:none;">
+      <div class="drawer-price-breakdown">
+        <div class="drawer-price-row">
+          <span>Item Subtotal</span>
+          <span id="cart-subtotal-val">₹0</span>
+        </div>
+        <div class="drawer-price-row">
+          <span>Farm Chilled Delivery</span>
+          <span id="cart-delivery-val">₹40</span>
+        </div>
+        <div class="drawer-price-row total-row">
+          <span>Estimated Total</span>
+          <span id="cart-total-val">₹0</span>
+        </div>
+      </div>
+
+      <div class="drawer-actions">
+        <button type="button" class="btn btn-primary large" id="cart-checkout-btn">
+          Proceed to Checkout ➔
+        </button>
+        <button type="button" class="btn btn-secondary" id="cart-continue-shopping-btn">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       13. PRODUCT QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="vf-modal-backdrop" id="quick-view-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="vf-modal-backdrop-catcher" id="quick-view-backdrop"></div>
+    <div class="vf-modal-dialog">
+      <button type="button" class="modal-close-btn" id="quick-view-close-btn" aria-label="Close preview">✕</button>
+      <div id="quick-view-body">
+        <!-- Rendered dynamically by js/products.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       14. LIVE SEARCH MODAL
+       ========================================================================== -->
+  <div class="vf-modal-backdrop" id="search-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="vf-modal-backdrop-catcher" id="search-backdrop"></div>
+    <div class="vf-modal-dialog search-modal-dialog">
+      <button type="button" class="modal-close-btn" id="search-modal-close" aria-label="Close search">✕</button>
+      
+      <div class="search-input-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input-field" placeholder="Search eggs, chicken, chicks, raw honey..." autocomplete="off" />
+        <button type="button" id="search-clear-btn" style="display:none; background:none; border:none; cursor:pointer; font-weight:800; font-size:1.1rem; color:var(--vf-muted-text);">✕</button>
+      </div>
+
+      <div id="search-results-list">
+        <!-- Suggestions or live results rendered dynamically by js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       15. CHECKOUT PROTOTYPE MODAL
+       ========================================================================== -->
+  <div class="vf-modal-backdrop" id="checkout-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="vf-modal-backdrop-catcher" id="checkout-backdrop"></div>
+    <div class="vf-modal-dialog checkout-modal-dialog">
+      <button type="button" class="modal-close-btn" id="checkout-modal-close" aria-label="Close checkout">✕</button>
+      <div id="checkout-modal-body">
+        <!-- Step 1, Step 2, and Step 3 rendered dynamically by js/checkout.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       16. BRAND REEL VIDEO MODAL
+       ========================================================================== -->
+  <div class="vf-modal-backdrop" id="reel-video-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="vf-modal-backdrop-catcher" id="reel-modal-backdrop"></div>
+    <div class="vf-modal-dialog reel-modal-dialog">
+      <button type="button" class="modal-close-btn" id="reel-modal-close-btn" style="background:#fff; color:#000;" aria-label="Close reel">✕</button>
+      <div id="reel-modal-body">
+        <!-- Rendered dynamically by js/sliders.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       17. ACCOUNT & ORDERS DRAWER (SIMULATED PROTOTYPE)
+       ========================================================================== -->
+  <div class="vf-drawer-backdrop" id="account-backdrop" aria-hidden="true"></div>
+  <aside class="vf-drawer-panel" id="account-drawer" aria-labelledby="account-drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <h3 id="account-drawer-title">My Farm Account</h3>
+      <button type="button" class="drawer-close-btn" id="account-drawer-close" aria-label="Close account panel">✕</button>
+    </div>
+
+    <div class="account-profile-header">
+      <div class="profile-avatar-circle">PN</div>
+      <div>
+        <h4 style="font-size:1.05rem; color:var(--vf-deep-green);">Priya Nair</h4>
+        <span style="font-size:0.8rem; color:var(--vf-muted-text);">priya.nair@example.com</span>
+        <div style="font-size:0.75rem; font-weight:700; color:var(--vf-forest-green); margin-top:3px;">
+          ✓ Valley Farm Club Member
+        </div>
+      </div>
+    </div>
+
+    <ul class="account-menu-list">
+      <li class="account-menu-item">
+        <button type="button" onclick="ValleyApp.showToast('Showing your latest simulated orders.', 'success');">
+          <span>📦 My Orders &amp; Subscriptions</span>
+          <span>❯</span>
+        </button>
+      </li>
+      <li class="account-menu-item">
+        <button type="button" onclick="ValleyApp.showToast('Active delivery: Scheduled for tomorrow morning 7:30 AM.', 'success');">
+          <span>🚚 Track Active Morning Delivery</span>
+          <span>❯</span>
+        </button>
+      </li>
+      <li class="account-menu-item">
+        <button type="button" onclick="ValleyApp.showToast('You have 3 items in your saved harvest list.', 'success');">
+          <span>❤️ Saved Items &amp; Wishlist</span>
+          <span>❯</span>
+        </button>
+      </li>
+      <li class="account-menu-item">
+        <button type="button" onclick="ValleyApp.showToast('Default delivery address: Flat 402, Valley Meadows, Bangalore.', 'success');">
+          <span>📍 Saved Delivery Addresses</span>
+          <span>❯</span>
+        </button>
+      </li>
+      <li class="account-menu-item">
+        <button type="button" onclick="ValleyApp.showToast('Support hotline: +91 98765 43210 (6 AM - 9 PM)', 'success');">
+          <span>💬 Customer Care &amp; WhatsApp Farm Support</span>
+          <span>❯</span>
+        </button>
+      </li>
+    </ul>
+
+    <div style="padding: var(--vf-space-lg); margin-top:auto; border-top:1px solid var(--vf-soft-border); text-align:center;">
+      <p style="font-size:0.78rem; color:var(--vf-muted-text); margin-bottom:12px;">This is a frontend demonstration account interface.</p>
+      <button type="button" class="btn btn-secondary" style="width:100%;" onclick="ValleyApp.closeAccountDrawer(); ValleyApp.showToast('Simulated Sign Out complete.', 'success');">
+        Sign Out (Demo)
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       18. MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="vf-drawer-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-panel" id="mobile-nav-drawer" aria-labelledby="mobile-nav-title" role="dialog" aria-modal="true">
+    <div class="mobile-nav-header">
+      <img src="assets/images/logo/logo.svg" alt="Valley Farm Logo" style="height:38px;" />
+      <button type="button" class="drawer-close-btn" id="mobile-nav-close-btn" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#top-header" class="mobile-nav-link">Home</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="all">All Products</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="eggs">Fresh Eggs</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="chicken">Fresh Chicken Cuts</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="chicks">Day-Old Chicks</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="honey">Pure Farm Honey</a></li>
+      <li><a href="#fresh-picks-section" class="mobile-nav-link" data-category-target="combos">Farm Combos</a></li>
+      <li><a href="#farm-facts-section" class="mobile-nav-link">Our Farm Story</a></li>
+    </ul>
+
+    <div style="padding: var(--vf-space-lg); margin-top:auto; border-top:2px solid var(--vf-deep-green); background-color:var(--vf-warm-cream);">
+      <button type="button" class="btn btn-primary" style="width:100%; margin-bottom:8px;" onclick="ValleyApp.openCartDrawer();">
+        View Cart
+      </button>
+      <button type="button" class="btn btn-secondary" style="width:100%;" onclick="ValleyApp.openAccountDrawer();">
+        My Account
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       JAVASCRIPT SCRIPTS (MODULAR ARCHITECTURE)
+       ========================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/sliders.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    // Initialize application modules once DOM is ready
+    document.addEventListener("DOMContentLoaded", function() {
+      ValleyProducts.init();
+      ValleySliders.init();
+      ValleyCheckout.init();
+      ValleyApp.init();
+    });
+  </script>
+</body>
+</html>
